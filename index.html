@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giao diện Mobile</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: url('https://i.imgur.com/RHSdk0h.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    /* Hồ sơ người dùng */
+    .profile {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 350px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+    }
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .profile p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: black;
+    }
+    /* Mời người mới */
+    .invite-box {
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .invite-box .left {
+      display: flex;
+      align-items: center;
+    }
+    .invite-box img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .invite-box p {
+      font-size: 1rem;
+      color: black;
+      font-weight: bold;
+    }
+    .invite-box .right {
+      background: #f3c27d;
+      padding: 8px 15px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Grid menu */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      width: 90%;
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      border-radius: 15px;
+    }
+    .grid-item {
+      display: flex;
+      align-items: center;
+      background: white;
+      padding: 15px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+    .grid-item img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .grid-item p {
+      font-size: 1rem;
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hồ sơ người dùng -->
+  <div class="profile">
+    <img src="https://i.imgur.com/Gk4Qdeu.jpeg" alt="Avatar">
+    <p>Chị Chị Turbo Lite Lazy ♥️</p>
+  </div>
+
+  <!-- Mời người mới -->
+  <div class="invite-box">
+    <div class="left">
+      <img src="https://i.imgur.com/1z0zeya.png" alt="Icon">
+      <p>Kim Cương</p>
+    </div>
+    <div class="right"> 999.999.999.999 </div>
+  </div>
+
+  <!-- Grid menu -->
+  <div class="grid-container">
+    <div class="grid-item" onclick="openURL('https://youtube.com/@turboxlite')">
+      <img src="https://img.utdstc.com/icon/367/c07/367c07a62d78fa7d0253ec501c789b8251ac8fb62e2d0185ed38c9417af1bed0:200" alt="Icon">
+      <p>YouTube</p>
+    </div>
+    <div class="grid-item" onclick="openURL('https://www.tiktok.com/@game.turbografx')">
+      <img src="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/webapp/main/react-v18/webapp-seo-mobile/0c398b018482cebeb833.png" alt="Icon">
+      <p>TikTok</p>
+    </div>
+    <div class="grid-item" onclick="openURL('https://discord.gg/PXBcWMEgNP')">
+      <img src="https://img.utdstc.com/icon/5ed/010/5ed01047ff16ea45ec92a448cd98f0a807eeca466da7c176a1b2b5f2ca8deb66:200" alt="Icon">
+      <p>Discord</p>
+    </div>
+    <div class="grid-item" onclick="openURL('https://turbolite.xyz/')">
+      <img src="https://cdn-icons-png.flaticon.com/128/892/892634.png" alt="Icon">
+      <p>Website</p>
+    </div>
+  </div>
+
+  <script>
+    function openURL(url) {
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
