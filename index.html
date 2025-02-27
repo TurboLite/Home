@@ -18,6 +18,12 @@
     }, { passive: false });
 </script>
   <style>
+  .tab-item {
+    -webkit-tap-highlight-color: transparent;
+}
+.tab-item:focus {
+    outline: none;
+}
     * {
       margin: 0;
       padding: 0;
@@ -90,6 +96,12 @@
       font-weight: bold;
       cursor: pointer;
     }
+.grid-item {
+    -webkit-tap-highlight-color: transparent;
+}
+.tab-item:focus {
+    outline: none;
+}
     /* Grid menu */
     .grid-container {
       display: grid;
@@ -126,7 +138,7 @@
   <!-- Hồ sơ người dùng -->
   <div class="profile">
     <img src="https://i.imgur.com/Gk4Qdeu.jpeg" alt="Avatar">
-    <p>Chị Chị Turbo Lite Lazy ♥️</p>
+    <p>Chị Chị Turbo Lite Lazy <3 </p>
   </div>
 
   <!-- Mời người mới -->
@@ -163,6 +175,15 @@
       window.open(url, "_blank");
     }
   </script>
+<script>
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // Chặn chuột phải
+    });
 
+    document.addEventListener('copy', function(event) {
+        event.preventDefault(); // Chặn copy
+        alert("");
+    });
+</script>
 </body>
 </html>
