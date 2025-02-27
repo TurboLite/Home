@@ -96,11 +96,20 @@
       font-weight: bold;
       cursor: pointer;
     }
-.grid-item {
-    -webkit-tap-highlight-color: transparent;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent; /* Chặn hiệu ứng nhấn */
 }
-.tab-item:focus {
-    outline: none;
+
+.grid-item, .policy-item {
+    -webkit-tap-highlight-color: transparent; /* Chặn hiệu ứng nhấn cho các nút */
+}
+
+.grid-item:focus, .policy-item:focus {
+    outline: none; /* Chặn viền focus khi nhấn */
 }
     /* Grid menu */
     .grid-container {
@@ -131,6 +140,36 @@
       color: black;
       font-weight: bold;
     }
+/* Chính sách (Moved Below Grid Menu) */
+        .policy-container {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 400px;
+        }
+        .policy-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            width: 48%;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+        }
+        .policy-item img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+.policy-container {
+    margin-top: 20px; /* Tăng giá trị này nếu muốn xuống thấp hơn */
+}
   </style>
 </head>
 <body>
@@ -138,7 +177,7 @@
   <!-- Hồ sơ người dùng -->
   <div class="profile">
     <img src="https://i.imgur.com/Gk4Qdeu.jpeg" alt="Avatar">
-    <p>Chị Chị Turbo Lite Lazy <3 </p>
+    <p>Powered By Turbo Lite <3 </p>
   </div>
 
   <!-- Mời người mới -->
@@ -169,7 +208,17 @@
       <p>Website</p>
     </div>
   </div>
-
+<!-- Chính sách (Đã được di chuyển xuống dưới) -->
+    <div class="policy-container">
+        <div class="policy-item" onclick="openURL('https://now.gg/terms-and-privacy.html#terms')">
+            <img src="https://cdn-icons-png.flaticon.com/128/1041/1041916.png" alt="Icon">
+            Điều Khoản
+        </div>
+        <div class="policy-item" onclick="openURL('https://now.gg/copyright-dispute-policy.html')">
+            <img src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="Icon">
+            Chính Sách
+        </div>
+    </div>
   <script>
     function openURL(url) {
       window.open(url, "_blank");
